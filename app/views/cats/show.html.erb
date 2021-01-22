@@ -1,0 +1,30 @@
+<h3><%= @cat.name %> Info</h3>
+
+<h5>Name: <%= @cat.name %></h5>
+<h5>Age: <%= @cat.age %></h5>
+<h5>Birthdate: <%= @cat.birth_date %></h5>
+<h5>Color: <%= @cat.color.capitalize %></h5>
+<h5>Description: <%= @cat.description %></h5>
+<h5>Sex: <%= @cat.sex == 'F' ? 'Female' : "Male" %></h5>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Birthdate</th>
+        <th>Color</th>
+        <th>Sex</th>
+        <th>Description</th>
+    </tr>
+
+    <tr>
+        <td><%= @cat.name %></td>
+        <td><%= @cat.age %></td>
+        <td><%= @cat.birth_date %></td>
+        <td><%= @cat.color.capitalize %></td>
+        <td><%= @cat.sex == "F" ? "Female" : "Male"%></td>
+        <td><%= @cat.description %></td>
+    </tr>
+</table>
+
+<%= link_to 'Edit cat', edit_cat_url(@cat) %>
